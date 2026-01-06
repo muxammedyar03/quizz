@@ -1,16 +1,20 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 
+type QuizLevel = 'beginner' | 'intermediate' | 'advanced';
+
 // Copy schema types
+type SafeParseSuccess = { success: true; data: QuizLevel };
+type SafeParseError = { success: false; data?: undefined };
+type SafeParseResult = SafeParseSuccess | SafeParseError;
+
 const QuizLevelSchema = {
-  safeParse: (value: string) => {
+  safeParse: (value: string): SafeParseResult => {
     if (['beginner', 'intermediate', 'advanced'].includes(value)) {
       return { success: true, data: value as 'beginner' | 'intermediate' | 'advanced' };
     }
     return { success: false };
   }
 };
-
-type QuizLevel = 'beginner' | 'intermediate' | 'advanced';
 
 // Mock quiz data (copied from storage.ts)
 const MOCK_QUIZZES: Record<QuizLevel, any> = {
