@@ -1,18 +1,28 @@
-import { sql } from "drizzle-orm";
-import { pgTable, text, varchar } from "drizzle-orm/pg-core";
-import { createInsertSchema } from "drizzle-zod";
 import { z } from "zod";
 
-export const users = pgTable("users", {
-  id: varchar("id").primaryKey().default(sql`gen_random_uuid()`),
-  username: text("username").notNull().unique(),
-  password: text("password").notNull(),
+// === QUIZ DATA TYPES (Served via API) ===
+export const OptionSchema = z.object({
+  id: z.string(),
+  text: z.string(),
 });
 
-export const insertUserSchema = createInsertSchema(users).pick({
-  username: true,
-  password: true,
+export const QuestionSchema = z.object({
+  id: z.string(),
+  text: z.string(),
+  options: z.array(OptionSchema),
+  correctOptionId: z.string(),
 });
 
-export type InsertUser = z.infer<typeof insertUserSchema>;
-export type User = typeof users.$inferSelect;
+export const QuizLevelSchema = z.enum(["beginner", "intermediate", "advanced"]);
+
+export const QuizDataSchema = z.object({
+  level: QuizLevelSchema,
+  audioUrl: z.string(),
+  questions: z.array(QuestionSchema),
+  duration: z.number(), // duration in seconds
+});
+
+export type QuizLevel = z.infer<typeof QuizLevelSchema>;
+export type Option = z.infer<typeof OptionSchema>;
+export type Question = z.infer<typeof QuestionSchema>;
+export type QuizData = z.infer<typeof QuizDataSchema>;

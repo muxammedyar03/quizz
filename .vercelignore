@@ -1,0 +1,9 @@
+node_modules
+.git
+.env
+.local
+server
+script
+attached_assets
+LOCALSTORAGE_CHANGES.md
+README.md
