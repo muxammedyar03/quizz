@@ -4,3 +4,7 @@ dist
 server/public
 vite.config.ts.*
 *.tar.gz
+LOCALSTORAGE_CHANGES.md
+README.md
+VERCEL_DEPLOY.md
+.local
