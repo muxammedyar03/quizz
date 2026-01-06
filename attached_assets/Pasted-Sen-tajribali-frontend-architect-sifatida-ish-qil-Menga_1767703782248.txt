@@ -1,0 +1,149 @@
+Sen tajribali frontend architect sifatida ish qil. Menga quyidagi texnik talablarga 100% mos, toza arxitektura asosida yozilgan loyiha kerak.
+
+🧠 Loyiha tavsifi
+
+Ingliz tilidan test ishlash uchun statik quiz web app ishlab chiqilsin.
+
+🔹 Funktsional talablar
+
+Boshlanish sahifasi
+
+Foydalanuvchi darajani tanlaydi:
+
+Beginner
+
+Intermediate
+
+Advanced
+
+Darajaga qarab test va audio yuklanadi.
+
+Quiz jarayoni
+
+Savollar card ko‘rinishida
+
+Next va Back tugmalari orqali savollar almashadi
+
+Savollar list ko‘rinishida chiqmasin
+
+Javob belgilanmasdan o‘tkazib ketish mumkin
+
+Audio
+
+Test yuqorisida bitta audio player
+
+Audio test davomida o‘zgarmaydi
+
+Faqat darajaga qarab audio almashadi
+
+Audio fayllar assets ichida bo‘ladi
+
+Validatsiya
+
+Oxirgi savolga kelganda:
+
+Agar belgilanmagan savollar bo‘lsa
+
+sonner toast orqali ogohlantirish chiqsin
+
+Foydalanuvchi orqaga qaytib belgilanmagan savollarga javob bera olsin
+
+Timer
+
+Quiz uchun timer bo‘ladi
+
+Vaqt tugasa:
+
+Test avtomatik yakunlanadi
+
+Natijalar ko‘rsatiladi
+
+Test yakuni
+
+Test yakunlandi tugmasi mavjud
+
+Natijalar sahifasida:
+
+Qaysi savollar to‘g‘ri
+
+Qaysilari xato
+
+To‘g‘ri javob qaysi ekanligi aniq ko‘rsatiladi
+
+🔹 Texnik talablar
+
+Stack
+
+Next.js
+
+TypeScript
+
+Tailwind CSS
+
+Data
+
+Barcha savollar JSON formatda
+
+Audio fayllar assets ichida
+
+Arxitektura
+
+Feature-based architecture
+
+modules / features bo‘yicha ajratilgan
+
+Shared componentlar ui papkasida
+
+Module ichidagi componentlar components yoki widgets papkasida
+
+Component yondashuv
+
+Smart va Dump (Presentational) componentlarga ajratish
+
+Dump componentlar:
+
+Logic saqlamasin
+
+Faqat props orqali ishlasin
+
+Smart componentlar:
+
+State va business logic shu yerda bo‘lsin
+
+State management
+
+Local state minimal darajada
+
+Keraksiz re-renderlardan qochish
+
+any type qat’iyan ishlatilmasin
+
+Kod sifati
+
+TypeScript strict
+
+Reusable componentlar
+
+Aniq interface va type’lar
+
+Clean code va scalable struktura
+
+🔹 Dizayn va reference
+
+UI dizayn quyidagi saytlarga o‘xshash bo‘lsin:
+
+https://quiz-app-three-self.vercel.app/
+
+Repository:
+
+https://github.com/muxammedyar03/quizApp
+
+🔹 Natija
+
+Loyihani tartibli arxitektura bilan yoz
+
+Papkalar strukturasi tushunarli bo‘lsin
+
+Har bir muhim qarorga qisqa izoh ber
+
+Kod production-ready bo‘lsin
