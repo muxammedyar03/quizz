@@ -33,7 +33,7 @@ export function ResultSummary({ score, total, level, onRetry, onGoHome }: Result
   }
 
   return (
-    <div className="bg-card rounded-2xl shadow-xl border border-border p-8 text-center max-w-2xl mx-auto mb-12">
+    <div className="bg-card rounded-2xl shadow-xl border border-border p-8 text-center max-w-4xl mx-auto mb-12">
       <motion.div 
         initial={{ scale: 0.8, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
@@ -64,7 +64,7 @@ export function ResultSummary({ score, total, level, onRetry, onGoHome }: Result
       </div>
 
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
-        <Button onClick={onRetry} variant="outline" className="gap-2 h-12 px-8 text-base">
+        <Button onClick={onRetry} className="gap-2 h-12 px-8 text-base border border-border bg-transparent text-popover-foreground">
           <RotateCcw className="w-4 h-4" />
           Retry Quiz
         </Button>

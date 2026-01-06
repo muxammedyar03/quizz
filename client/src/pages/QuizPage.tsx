@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useRoute, useLocation } from "wouter";
 import { motion, AnimatePresence } from "framer-motion";
-import { Loader2, ArrowRight, ArrowLeft, CheckCircle, AlertCircle } from "lucide-react";
+import { Loader2, ArrowRight, ArrowLeft, CheckCircle, AlertCircle, LucideInfo } from "lucide-react";
 
 import { useQuiz } from "@/hooks/use-quiz";
 import { useQuizStore } from "@/store/quiz.store";
@@ -13,6 +13,7 @@ import { Progress } from "@/components/ui/progress";
 import { Card } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
 import { type QuizLevel } from "@shared/schema";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 export default function QuizPage() {
   const [match, params] = useRoute("/quiz/:level");
@@ -120,7 +121,7 @@ export default function QuizPage() {
   return (
     <div className="min-h-screen bg-background pb-20">
       {/* Header Bar */}
-      <header className="sticky top-0 z-40 w-full border-b bg-background/80 backdrop-blur-md supports-[backdrop-filter]:bg-background/60">
+      <header className="sticky top-0 z-40 w-full border-b border-gray-400 dark:border-border bg-background/80 backdrop-blur-md supports-[backdrop-filter]:bg-background/60">
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <span className="font-display font-bold text-lg capitalize">{level} Quiz</span>
@@ -129,11 +130,17 @@ export default function QuizPage() {
             </span>
           </div>
           
-          <QuizTimer 
-            durationSeconds={quizData.duration} 
-            onTimeUp={handleTimeUp}
-            isFinished={isFinished}
-          />
+          <div className="flex items-center gap-2 h-full">
+            <Button variant="ghost" className="h-12 border border-gray-400 dark:border-border" onClick={() => setLocation('/about')}>
+              <LucideInfo className="w-4 h-4" /> About
+            </Button>
+            <ThemeToggle />
+            <QuizTimer
+              durationSeconds={quizData.duration} 
+              onTimeUp={handleTimeUp}
+              isFinished={isFinished}
+            />
+          </div>
         </div>
         <Progress value={progress} className="h-1 rounded-none bg-secondary" />
       </header>
@@ -142,7 +149,7 @@ export default function QuizPage() {
         <div className="grid gap-8">
           
           {/* Audio Section - Always visible */}
-          <section className="bg-card rounded-2xl shadow-sm border p-6">
+          <section className="bg-card rounded-2xl shadow-sm border border-gray-400 dark:border-border p-6">
             <div className="flex items-center gap-3 mb-4">
               <div className="p-2 bg-primary/10 rounded-lg text-primary">
                 <HeadphonesIcon className="w-5 h-5" />
@@ -177,7 +184,7 @@ export default function QuizPage() {
                       variant="outline"
                       onClick={prevQuestion}
                       disabled={currentQuestionIndex === 0}
-                      className="gap-2 h-14 rounded-xl text-base text-primary font-bold bg-gradient-to-r from-white to-gray-500/15"
+                      className="gap-2 h-14 rounded-xl text-base text-primary font-bold bg-gradient-to-r from-white to-gray-500/15 dark:from-gray-800 dark:to-gray-900"
                     >
                       <ArrowLeft className="w-4 h-4" /> Previous
                     </Button>
@@ -189,7 +196,7 @@ export default function QuizPage() {
                     {currentQuestionIndex === totalQuestions - 1 ? (
                       <Button 
                         onClick={handleFinish} 
-                        className="gap-2 bg-green-600 hover:bg-green-700 text-white px-8 h-14 rounded-xl text-base"
+                        className="gap-2 bg-green-600 hover:bg-green-700 text-white px-8 h-14 rounded-xl text-base border-green-400"
                       >
                         <CheckCircle className="w-4 h-4" />
                         Finish Quiz

@@ -1,8 +1,12 @@
 import { motion } from "framer-motion";
 import { LevelCard } from "@/features/level-select/ui/LevelCard";
-import { Headphones } from "lucide-react";
+import { Headphones, LucideInfo } from "lucide-react";
+import { ThemeToggle } from "@/components/ThemeToggle";
+import { Button } from "@/components/ui/button";
+import { useLocation } from "wouter";
 
 export default function LevelSelect() {
+  const [, setLocation] = useLocation();
   const container = {
     hidden: { opacity: 0 },
     show: {
@@ -20,6 +24,18 @@ export default function LevelSelect() {
 
   return (
     <div className="min-h-screen bg-background bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/5 via-background to-background">
+      {/* <div className="fixed top-0 p-2 left-0 right-0 z-50 backdrop-blur-sm border-b border-border flex justify-end">
+        <Button variant="ghost" className="mr-2 border border-gray-400 dark:border-border" onClick={() => setLocation('/about')}>
+          <LucideInfo className="w-4 h-4" /> About
+        </Button>
+        <ThemeToggle />
+      </div> */}
+       <div className="fixed top-2 p-3 right-2 rounded-xl z-50 backdrop-blur-sm border border-gray-700/30 flex justify-end">
+        <Button variant="ghost" className="mr-2 border border-gray-400 dark:border-border" onClick={() => setLocation('/about')}>
+          <LucideInfo className="w-4 h-4" /> About
+        </Button>
+        <ThemeToggle />
+      </div>
       <main className="container mx-auto px-4 py-16 md:py-24">
         
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
