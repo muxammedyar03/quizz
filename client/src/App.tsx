@@ -6,8 +6,10 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { ThemeProvider } from "@/components/ThemeProvider";
 
 import LevelSelect from "@/pages/LevelSelect";
-import AboutPage from "@/pages/AboutPage";
-import QuizPage from "@/pages/QuizPage";
+import AboutPage from "@/pages/AboutPageNew";
+import ComingSoonPage from "@/pages/ComingSoonPage";
+import IntermediateHubPage from "@/pages/IntermediateHubPage";
+import UnitFlowPage from "@/pages/UnitFlowPage";
 import ResultPage from "@/pages/ResultPage";
 import NotFound from "@/pages/not-found";
 
@@ -16,7 +18,10 @@ function Router() {
     <Switch>
       <Route path="/" component={LevelSelect} />
       <Route path="/about" component={AboutPage} />
-      <Route path="/quiz/:level" component={QuizPage} />
+      <Route path="/quiz/intermediate/:unitId" component={UnitFlowPage} />
+      <Route path="/quiz/intermediate" component={IntermediateHubPage} />
+      <Route path="/quiz/beginner" component={ComingSoonPage} />
+      <Route path="/quiz/advanced" component={ComingSoonPage} />
       <Route path="/result" component={ResultPage} />
       <Route component={NotFound} />
     </Switch>

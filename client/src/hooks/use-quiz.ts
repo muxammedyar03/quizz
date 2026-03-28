@@ -2,9 +2,10 @@ import { useQuery } from "@tanstack/react-query";
 import { api, buildUrl } from "@shared/routes";
 import { type QuizLevel } from "@shared/schema";
 
-export function useQuiz(level: QuizLevel) {
+export function useQuiz(level: QuizLevel, options?: { enabled?: boolean }) {
   return useQuery({
     queryKey: [api.quiz.get.path, level],
+    enabled: options?.enabled ?? true,
     queryFn: async () => {
       // Validate level before fetching to prevent bad requests
       if (!['beginner', 'intermediate', 'advanced'].includes(level)) {

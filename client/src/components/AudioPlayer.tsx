@@ -11,7 +11,12 @@ export function AudioPlayer({ src }: AudioPlayerProps) {
   const [progress, setProgress] = useState(0);
   const [duration, setDuration] = useState(0);
   const [volume, setVolume] = useState(1);
+  const [loadError, setLoadError] = useState(false);
   const audioRef = useRef<HTMLAudioElement>(null);
+
+  useEffect(() => {
+    setLoadError(false);
+  }, [src]);
 
   useEffect(() => {
     const audio = audioRef.current;
@@ -20,17 +25,28 @@ export function AudioPlayer({ src }: AudioPlayerProps) {
     const updateProgress = () => setProgress(audio.currentTime);
     const updateDuration = () => setDuration(audio.duration);
     const onEnded = () => setIsPlaying(false);
+    const onError = () => setLoadError(true);
 
     audio.addEventListener("timeupdate", updateProgress);
     audio.addEventListener("loadedmetadata", updateDuration);
     audio.addEventListener("ended", onEnded);
+    audio.addEventListener("error", onError);
 
     return () => {
       audio.removeEventListener("timeupdate", updateProgress);
       audio.removeEventListener("loadedmetadata", updateDuration);
       audio.removeEventListener("ended", onEnded);
+      audio.removeEventListener("error", onError);
     };
   }, [src]);
+
+  if (loadError) {
+    return (
+      <div className="w-full rounded-xl border border-dashed border-border/80 bg-muted/40 p-6 text-center text-sm text-muted-foreground">
+        Audio file is not available yet. Add the file to the project at the path referenced in units data, then refresh.
+      </div>
+    );
+  }
 
   const togglePlay = () => {
     if (!audioRef.current) return;

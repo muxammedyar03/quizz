@@ -1,0 +1,573 @@
+{
+  "version": 1,
+  "units": [
+    {
+      "id": "unit-01-going-shopping",
+      "romanNumeral": "I",
+      "order": 1,
+      "title": "Going shopping",
+      "theme": "Shopping Habits: Online vs In Store",
+      "prelistening": {
+        "questions": [
+          "Do you prefer online shopping or shopping in stores? Why?",
+          "What was the last thing you bought?"
+        ]
+      },
+      "whileListening": {
+        "questions": [
+          "What did Aziza buy online?",
+          "What advantage of online shopping does Murat mention?",
+          "What advantage of instore shopping does Aziza mention?"
+        ]
+      },
+      "postlistening": {
+        "transcript": "",
+        "discussionPrompts": []
+      },
+      "audioPreUrl": "/intermediate/UNIT_1.wav",
+      "audioWhileUrl": "/intermediate/UNIT_1.wav"
+    },
+    {
+      "id": "unit-02-best-friends-forever",
+      "romanNumeral": "II",
+      "order": 2,
+      "title": "Best friends forever!",
+      "theme": "What Makes a True Friend?",
+      "prelistening": {
+        "questions": [
+          "What do you think makes a good friend?",
+          "Who is your best friend? How long have you known them?"
+        ]
+      },
+      "whileListening": {
+        "questions": [
+          "According to Dilnoza, what is the most important thing in friendship?",
+          "What example does Dilnoza give about her best friend?",
+          "What qualities of a true friend do Dilnoza and Timur mention? (list at least)"
+        ]
+      },
+      "postlistening": {
+        "transcript": "",
+        "discussionPrompts": []
+      },
+      "audioPreUrl": "/intermediate/UNIT_2.wav",
+      "audioWhileUrl": "/intermediate/UNIT_2.wav"
+    },
+    {
+      "id": "unit-03-fun-and-games",
+      "romanNumeral": "III",
+      "order": 3,
+      "title": "Fun and games",
+      "theme": "My Favorite Sport and Why I Love It",
+      "prelistening": {
+        "questions": [
+          "What role do sports play in your life? Are they important to you?",
+          "Do you prefer team sports or individual sports? Explain your preference.",
+          "Who is a sportsperson you admire? What do you admire about them?"
+        ]
+      },
+      "whileListening": {
+        "questions": [
+          "What specific event made Aziza fall in love with football?",
+          "According to Aziza, what are the three main reasons she loves football?",
+          "Why does Aziza admire Cristiano Ronaldo specifically? What qualities does she highlight?",
+          "What advice does Aziza give to someone who wants to start playing football?"
+        ]
+      },
+      "postlistening": {
+        "transcript": "",
+        "discussionPrompts": []
+      },
+      "audioPreUrl": "/intermediate/UNIT_3.wav",
+      "audioWhileUrl": "/intermediate/UNIT_3.wav"
+    },
+    {
+      "id": "unit-04-extreme-weather",
+      "romanNumeral": "IV",
+      "order": 4,
+      "title": "Extreme weather",
+      "theme": "Surviving a Natural Disaster: Real Stories",
+      "prelistening": {
+        "questions": [
+          "Have you ever experienced any extreme weather? What happened?",
+          "What do you think is the most important thing to do during a natural disaster?",
+          "Can you name any natural disasters that happen in your country?"
+        ]
+      },
+      "whileListening": {
+        "questions": [
+          "Where did each story take place? Story 1: __________ Story 2: __________ Story 3: __________",
+          "How did the Miller family survive the flood?",
+          "What did Carlos learn from his experience during Hurricane Maria?",
+          "How did Bat‑Erdene survive the blizzard in Mongolia?"
+        ]
+      },
+      "postlistening": {
+        "transcript": "",
+        "discussionPrompts": []
+      },
+      "audioPreUrl": "/intermediate/UNIT_4.wav",
+      "audioWhileUrl": "/intermediate/UNIT_4.wav"
+    },
+    {
+      "id": "unit-05-you-made-it",
+      "romanNumeral": "V",
+      "order": 5,
+      "title": "You made it!",
+      "theme": "The Best Day of My Life",
+      "prelistening": {
+        "questions": [
+          "Describe a time when you felt truly proud of yourself. What had you achieved?",
+          "What role does family support play in achieving personal goals?",
+          "Do you think it’s more important to win or to do your best? Explain your opinion."
+        ]
+      },
+      "whileListening": {
+        "questions": [
+          "What specific preparations did Gulnaz make for the competition, and how did she feel the day before?",
+          "How did her mother’s presence and actions influence Gulnaz’s performance on stage?",
+          "Gulnaz mentions her mind “went blank” initially. What helped her overcome this fear?",
+          "What did Gulnaz realize was more important than winning the competition itself?"
+        ]
+      },
+      "postlistening": {
+        "transcript": "",
+        "discussionPrompts": []
+      },
+      "audioPreUrl": "/intermediate/UNIT_5.wav",
+      "audioWhileUrl": "/intermediate/UNIT_5.wav"
+    },
+    {
+      "id": "unit-06-take-care-of-yourself",
+      "romanNumeral": "VI",
+      "order": 6,
+      "title": "Take care of yourself",
+      "theme": "Healthy Habits That Changed My Life",
+      "prelistening": {
+        "questions": [
+          "In your opinion, what is the biggest challenge teenagers face today regarding their health?",
+          "Do you think it's easier to maintain physical health or mental health? Why?",
+          "What does the phrase \"start small\" mean to you when it comes to making life changes?"
+        ]
+      },
+      "whileListening": {
+        "questions": [
+          "According to Doctor Karimova, what crucial role does sleep play in learning and memory?",
+          "What specific advice does she give for improving \"sleep hygiene\"?",
+          "Beyond structured sports, what other examples of physical activity does she suggest?",
+          "What is Doctor Karimova's philosophy on eating fast food?",
+          "Why does she emphasize the importance of breakfast, and what healthy options does she suggest?",
+          "What is Doctor Karimova's main advice for managing stress and maintaining mental health?",
+          "What is her final, overarching tip for building healthier habits?"
+        ]
+      },
+      "postlistening": {
+        "transcript": "",
+        "discussionPrompts": []
+      },
+      "audioPreUrl": "/intermediate/UNIT_6.wav",
+      "audioWhileUrl": "/intermediate/UNIT_6.wav"
+    },
+    {
+      "id": "unit-07-sound-check",
+      "romanNumeral": "VII",
+      "order": 7,
+      "title": "Sound check",
+      "theme": "My Music Taste: From Classical to Pop",
+      "prelistening": {
+        "questions": [
+          "How much does your musical taste define your personality? Can you tell a lot about a person from the music they listen to?",
+          "Is there a particular song or piece of music that is closely linked to a strong memory or emotion for you? Describe it.",
+          "Do you think the music popular today has the same depth and quality as music from previous decades? Why or why not?"
+        ]
+      },
+      "whileListening": {
+        "questions": [
+          "According to Umida, what makes pop music appealing and accessible?",
+          "Alisher appreciates both rock and classical music. What specific qualities does he attribute to each genre?",
+          "How do both Umida and Alisher use music to manage or reflect their emotions?",
+          "What role does traditional music play in their lives, according to the conversation?"
+        ]
+      },
+      "postlistening": {
+        "transcript": "",
+        "discussionPrompts": []
+      },
+      "audioPreUrl": "/intermediate/UNIT_7.wav",
+      "audioWhileUrl": "/intermediate/UNIT_7.wav"
+    },
+    {
+      "id": "unit-08-amazing-architecture",
+      "romanNumeral": "VIII",
+      "order": 8,
+      "title": "Amazing architecture",
+      "theme": "My Dream House: What Would It Look Like?",
+      "prelistening": {
+        "questions": [
+          "Where do you currently live? What do you like or dislike about it?",
+          "If you could design your perfect home, what three features would be most important to you? Why?",
+          "Do you prefer living in a busy city or a quiet countryside? Explain your preference."
+        ]
+      },
+      "whileListening": {
+        "questions": [
+          "Where would Umida's dream house be located, and why does she choose this location?",
+          "What materials would be used for the exterior of the house, and why?",
+          "List three special features Umida mentions for her dream house.",
+          "According to Umida, what should a home truly represent or feel like?"
+        ]
+      },
+      "postlistening": {
+        "transcript": "",
+        "discussionPrompts": []
+      },
+      "audioPreUrl": "/intermediate/UNIT_8.wav",
+      "audioWhileUrl": "/intermediate/UNIT_8.wav"
+    },
+    {
+      "id": "unit-09-the-future-is-now",
+      "romanNumeral": "IX",
+      "order": 9,
+      "title": "The future is now!",
+      "theme": "Life in 2050: Predictions and Dreams",
+      "prelistening": {
+        "questions": [
+          "When you imagine the year 2050, what's the first thing that comes to your mind?",
+          "Do you think technology will solve most of our problems or create new ones?"
+        ]
+      },
+      "whileListening": {
+        "questions": [
+          "According to Timur, what are two ways technology might change our daily lives by 2050?",
+          "What is Aysanem's main concern about advanced technology like brain chips?",
+          "What environmental solutions does Timur hope to see by 2050?",
+          "What does Timur say is the key to true happiness?"
+        ]
+      },
+      "postlistening": {
+        "transcript": "",
+        "discussionPrompts": []
+      },
+      "audioPreUrl": "/intermediate/UNIT_9.wav",
+      "audioWhileUrl": "/intermediate/UNIT_9.wav"
+    },
+    {
+      "id": "unit-10-animals-in-danger",
+      "romanNumeral": "X",
+      "order": 10,
+      "title": "Animals in danger",
+      "theme": "Should We Protect Endangered Animals?",
+      "prelistening": {
+        "questions": [
+          "What comes to mind when you hear the phrase \"endangered animals\"? Can you name any?",
+          "In your opinion, do humans have a responsibility to protect other species? Why or why not?",
+          "If you had to choose between spending a large sum of money on a new hospital or on saving a critically endangered animal, which would you choose and why?"
+        ]
+      },
+      "whileListening": {
+        "questions": [
+          "According to Bayram, what are the three main reasons we should protect endangered animals?",
+          "What is Ozoda's primary counterargument regarding the urgency of human needs?",
+          "How does Bayram argue that protecting animals and helping humans are \"interconnected\"? What examples does he give?",
+          "Ozoda presents a powerful counterargument about a village in Africa. Summarize this argument in your own words.",
+          "What \"integrated solution\" does Bayram suggest at the end to address both human and animal needs?"
+        ]
+      },
+      "postlistening": {
+        "transcript": "",
+        "discussionPrompts": []
+      },
+      "audioPreUrl": "/intermediate/UNIT_10.wav",
+      "audioWhileUrl": "/intermediate/UNIT_10.wav"
+    },
+    {
+      "id": "unit-11-off-to-school",
+      "romanNumeral": "XI",
+      "order": 11,
+      "title": "Off to school",
+      "theme": "School Life Around the World",
+      "prelistening": {
+        "questions": [
+          "What do you think school is like in other countries?",
+          "If you could ask a student from another country about their school, what would you ask?"
+        ]
+      },
+      "whileListening": {
+        "questions": [
+          "What time does school start and finish in Japan?",
+          "What do Brazilian students do during break time?",
+          "What interesting habit do Egyptian teachers have?",
+          "What similarities do the three schools share?",
+          "According to all the students, what is the best thing about school?"
+        ]
+      },
+      "postlistening": {
+        "transcript": "",
+        "discussionPrompts": []
+      },
+      "audioPreUrl": "/intermediate/UNIT_11.wav",
+      "audioWhileUrl": "/intermediate/UNIT_11.wav"
+    },
+    {
+      "id": "unit-12-getting-around",
+      "romanNumeral": "XII",
+      "order": 12,
+      "title": "Getting around",
+      "theme": "Travel Tips: How to Plan a Perfect Trip",
+      "prelistening": {
+        "questions": [
+          "Have you ever traveled to another city or country? What was your experience like?",
+          "What do you think is the most important thing to prepare before a trip?",
+          "Do you prefer to plan every detail of a trip or be spontaneous? Why?"
+        ]
+      },
+      "whileListening": {
+        "questions": [
+          "What are the four main tips Aygul and Sabir give for a perfect trip? Tip 1: ________________________________ Tip 2: ________________________________ Tip 3: ________________________________ Tip 4: ________________________________",
+          "Why does Sabir recommend making a checklist before traveling?",
+          "According to Aygul, what is the biggest mistake people make when packing?",
+          "What should you always pack in a small carry‑on bag, and why?",
+          "What does Sabir suggest doing to stay safe with money and cards?",
+          "What happened on Sabir’s trip to Istanbul? How did it turn into a positive experience?"
+        ]
+      },
+      "postlistening": {
+        "transcript": "",
+        "discussionPrompts": []
+      },
+      "audioPreUrl": "/intermediate/UNIT_12.wav",
+      "audioWhileUrl": "/intermediate/UNIT_12.wav"
+    },
+    {
+      "id": "unit-13-nofilter",
+      "romanNumeral": "XIII",
+      "order": 13,
+      "title": "nofilter",
+      "theme": "Social Media: Good or Bad?",
+      "prelistening": {
+        "questions": [
+          "Which social media platforms do you use? Which one do you spend the most time on?",
+          "How much time do you spend on social media each day? Do you think it is a lot or a little?",
+          "Do social media bring more benefit or more harm to your life? Explain your opinion."
+        ]
+      },
+      "whileListening": {
+        "questions": [
+          "What three advantages of social media did Ilhom mention?",
+          "What three problems of social media did Sarbinaz list?",
+          "What advice did Ilhom and Sarbinaz give for using social media safely? Write at least four pieces of advice.",
+          "What did they mean by saying \"social media is like a knife\"?",
+          "In their opinion, how much time is healthy to spend on social media?"
+        ]
+      },
+      "postlistening": {
+        "transcript": "",
+        "discussionPrompts": []
+      },
+      "audioPreUrl": "/intermediate/UNIT_13.wav",
+      "audioWhileUrl": "/intermediate/UNIT_13.wav"
+    },
+    {
+      "id": "unit-14-let-s-cook",
+      "romanNumeral": "XIV",
+      "order": 14,
+      "title": "Let's cook!",
+      "theme": "My Grandmother's Best Recipe",
+      "prelistening": {
+        "questions": [
+          "What role does food play in your family's gatherings? Is there a dish that is always present?",
+          "Do you think family recipes should be kept secret or shared with everyone? Why?",
+          "Describe a moment in your life when a taste or smell brought back a strong memory."
+        ]
+      },
+      "whileListening": {
+        "questions": [
+          "What does Aziza say is the most important ingredient in her grandmother's cooking?",
+          "List three specific details that make her grandmother's plov unique (ingredients or preparation methods).",
+          "What did Aziza learn from cooking with her grandmother, beyond the recipe itself?",
+          "According to Aziza, why should people ask their elders about family recipes?"
+        ]
+      },
+      "postlistening": {
+        "transcript": "",
+        "discussionPrompts": []
+      },
+      "audioPreUrl": "/intermediate/UNIT_14.wav",
+      "audioWhileUrl": "/intermediate/UNIT_14.wav"
+    },
+    {
+      "id": "unit-15-modern-lifestyles",
+      "romanNumeral": "XV",
+      "order": 15,
+      "title": "Modern Lifestyles",
+      "theme": "Working from Home vs Working in an Office",
+      "prelistening": {
+        "questions": [
+          "Do you think you would prefer working from home or in an office? Why?",
+          "What are the main challenges of working from home?",
+          "How important is social interaction at work for you?"
+        ]
+      },
+      "whileListening": {
+        "questions": [
+          "What are two advantages of working from home that Murat mentions?",
+          "According to Aziza, what are two benefits of working in an office?",
+          "How does Murat say he separates work from personal life when working from home?",
+          "What solution do both speakers agree on at the end? Why do they think it's the best?"
+        ]
+      },
+      "postlistening": {
+        "transcript": "",
+        "discussionPrompts": []
+      },
+      "audioPreUrl": "/intermediate/UNIT_15.wav",
+      "audioWhileUrl": "/intermediate/UNIT_15.wav"
+    },
+    {
+      "id": "unit-16-lights-camera-action",
+      "romanNumeral": "XVI",
+      "order": 16,
+      "title": "Lights, camera, action!",
+      "theme": "My All‑Time Favorite Movie",
+      "prelistening": {
+        "questions": [
+          "What is a film that has had a strong emotional impact on you? What made it so powerful?",
+          "Do you prefer films based on true stories or purely fictional ones? Why?",
+          "What does the phrase “never give up” mean to you personally?"
+        ]
+      },
+      "whileListening": {
+        "questions": [
+          "What is the film “The Pursuit of Happyness” based on?",
+          "What specific scene does Gulnara describe as “heartbreaking”? What happens in that scene?",
+          "What were three reasons Gulnara gives for loving this film?",
+          "What does Gulnara say the film reminds her of in her own life?",
+          "What message does Gulnara want listeners to take away from the film?"
+        ]
+      },
+      "postlistening": {
+        "transcript": "",
+        "discussionPrompts": []
+      },
+      "audioPreUrl": "/intermediate/UNIT_16.wav",
+      "audioWhileUrl": "/intermediate/UNIT_16.wav"
+    },
+    {
+      "id": "unit-17-getting-the-message",
+      "romanNumeral": "XVII",
+      "order": 17,
+      "title": "Getting the message",
+      "theme": "How to Express Your Opinion Without Fighting",
+      "prelistening": {
+        "questions": [
+          "Think of a recent disagreement you had. How did it end – well or badly? What went wrong?",
+          "Do you find it easier to express your opinion in writing or face to face? Why?",
+          "What does the phrase “agree to disagree” mean to you? Is it easy or hard to accept?"
+        ]
+      },
+      "whileListening": {
+        "questions": [
+          "According to Rayxan and Ulugbek, what is the main reason people argue about opinions?",
+          "List the four tips they give for expressing opinions without fighting. Tip 1: _________________________________ Tip 2: _________________________________ Tip 3: _________________________________ Tip 4: _________________________________",
+          "What example do they use to practice the tips? What compromise do they reach?",
+          "What does Ulugbek say is the real goal of a disagreement?"
+        ]
+      },
+      "postlistening": {
+        "transcript": "",
+        "discussionPrompts": []
+      },
+      "audioPreUrl": "/intermediate/UNIT_17.wav",
+      "audioWhileUrl": "/intermediate/UNIT_17.wav"
+    },
+    {
+      "id": "unit-18-we-love-celebs",
+      "romanNumeral": "XVIII",
+      "order": 18,
+      "title": "We love celebs!",
+      "theme": "If I Were Famous...",
+      "prelistening": {
+        "questions": [
+          "What comes to your mind when you think of the word “fame”? Is it something you desire or something you fear?",
+          "If you could be famous for one thing, what would you want it to be? Why?",
+          "Do you think famous people have easier or harder lives than ordinary people? Give reasons."
+        ]
+      },
+      "whileListening": {
+        "questions": [
+          "What kind of fame does Aziza say she would not want, and why?",
+          "List three positive things Aziza mentions about being famous.",
+          "List three negative aspects of fame that Aziza discusses.",
+          "How does Aziza say she would try to “stay grounded” if she became famous?",
+          "What final question does Aziza leave for listeners to think about?"
+        ]
+      },
+      "postlistening": {
+        "transcript": "",
+        "discussionPrompts": []
+      },
+      "audioPreUrl": "/intermediate/UNIT_18.wav",
+      "audioWhileUrl": "/intermediate/UNIT_18.wav"
+    },
+    {
+      "id": "unit-19-the-world-of-work",
+      "romanNumeral": "XIX",
+      "order": 19,
+      "title": "The world of work",
+      "theme": "The world of work",
+      "prelistening": {
+        "questions": [
+          "What career ideas do you have for yourself right now? How did you become interested in them?",
+          "Do you think it's better to specialize early or keep your options open? Why?",
+          "What does the phrase “work‑life balance” mean to you? Do you think it's important?"
+        ]
+      },
+      "whileListening": {
+        "questions": [
+          "What three‑step framework does Azizbek suggest for choosing a career?",
+          "According to Azizbek, why is having many interests a “strength, not a weakness”?",
+          "What is the difference between university education and vocational training? Give examples from the podcast.",
+          "Why does Azizbek say soft skills are “essential and often underestimated”? Name at least three soft skills mentioned.",
+          "What are the four pieces of advice Azizbek gives to students who want to start building their career?",
+          "How does Azizbek describe the ideal career?"
+        ]
+      },
+      "postlistening": {
+        "transcript": "",
+        "discussionPrompts": []
+      },
+      "audioPreUrl": "/intermediate/UNIT_19.wav",
+      "audioWhileUrl": "/intermediate/UNIT_19.wav"
+    },
+    {
+      "id": "unit-20-making-plans",
+      "romanNumeral": "XX",
+      "order": 20,
+      "title": "Making plans",
+      "theme": "My Plans for the Next Five Years",
+      "prelistening": {
+        "questions": [
+          "When you imagine your life five years from now, what do you see? What are you doing? Where are you living?",
+          "Do you prefer making detailed plans or going with the flow? Why?",
+          "What does the phrase “the journey is just as important as the destination” mean to you personally?"
+        ]
+      },
+      "whileListening": {
+        "questions": [
+          "What two university subjects is Ayjamal considering? What draws her to them?",
+          "What specific goals does she set for her second year of university?",
+          "What does she hope to achieve by her third year (2028) in terms of language, experience, and skills?",
+          "What will her focus be in her final year? What decision will she have to make?",
+          "By the time she is 22, what does Ayjamal hope to have in her life? List three things.",
+          "What does she say about plans changing? How does she view that possibility?"
+        ]
+      },
+      "postlistening": {
+        "transcript": "",
+        "discussionPrompts": []
+      },
+      "audioPreUrl": "/intermediate/UNIT_20.mp3",
+      "audioWhileUrl": "/intermediate/UNIT_20.mp3"
+    }
+  ]
+}

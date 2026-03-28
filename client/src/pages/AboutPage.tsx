@@ -2,7 +2,7 @@ import { motion, useReducedMotion } from "framer-motion";
 import { ArrowLeft, GraduationCap } from "lucide-react";
 import { useLocation } from "wouter";
 
-import { ThemeToggle } from "@/components/ThemeToggle";
+import { AppTopBar } from "@/components/layout/AppTopBar";
 import { Button } from "@/components/ui/button";
 
 const AVATAR_URL = "/author-avatar.png";
@@ -62,17 +62,16 @@ export default function AboutPage() {
         />
       </div>
 
-      <div className="fixed top-2 right-2 z-50 flex justify-end rounded-xl border border-gray-700/30 p-3 backdrop-blur-sm">
+      <AppTopBar>
         <Button
           variant="ghost"
-          className="mr-2 border border-gray-400 dark:border-border"
+          className="gap-2 border border-gray-400 dark:border-border rounded-xl"
           onClick={() => setLocation("/")}
         >
-          <ArrowLeft className="mr-2 h-4 w-4" />
+          <ArrowLeft className="h-4 w-4 shrink-0" />
           Back
         </Button>
-        <ThemeToggle />
-      </div>
+      </AppTopBar>
 
       <main className="container relative mx-auto px-4 pb-20 pt-24 md:pb-28 md:pt-28">
         <motion.div

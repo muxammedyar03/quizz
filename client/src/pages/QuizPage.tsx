@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useRoute, useLocation } from "wouter";
 import { motion, AnimatePresence } from "framer-motion";
-import { Loader2, ArrowRight, ArrowLeft, CheckCircle, AlertCircle, LucideInfo } from "lucide-react";
+import { Loader2, ArrowRight, ArrowLeft, CheckCircle, AlertCircle } from "lucide-react";
 
 import { useQuiz } from "@/hooks/use-quiz";
 import { useQuizStore } from "@/store/quiz.store";
@@ -13,6 +13,7 @@ import { Progress } from "@/components/ui/progress";
 import { Card } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
 import { type QuizLevel } from "@shared/schema";
+import { AppTopBarAboutButton } from "@/components/layout/AppTopBar";
 import { ThemeToggle } from "@/components/ThemeToggle";
 
 export default function QuizPage() {
@@ -131,9 +132,7 @@ export default function QuizPage() {
           </div>
           
           <div className="flex items-center gap-2 h-full">
-            <Button variant="ghost" className="h-12 border border-gray-400 dark:border-border" onClick={() => setLocation('/about')}>
-              <LucideInfo className="w-4 h-4" /> About
-            </Button>
+            <AppTopBarAboutButton className="h-12" />
             <ThemeToggle />
             <QuizTimer
               durationSeconds={quizData.duration} 
