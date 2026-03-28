@@ -154,8 +154,11 @@ export default function AboutPage() {
                   src={AVATAR_URL}
                   alt="Portrait of Altinay Turejanova"
                   className="aspect-[3/4] w-full object-cover"
-                  loading="eager"
+                  width={600}
+                  height={800}
+                  loading="lazy"
                   decoding="async"
+                  fetchPriority="low"
                 />
               </div>
             </div>
