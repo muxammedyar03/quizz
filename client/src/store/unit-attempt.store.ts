@@ -29,7 +29,8 @@ interface UnitAttemptState {
   patchDraft: (unitId: string, patch: Partial<UnitAttemptRecord>) => void;
   setWhileAnswers: (unitId: string, answers: string[]) => void;
   submitUnit: (unitId: string) => void;
-  resetUnit: (unitId: string) => void;
+  /** Clears submission and starts a fresh draft (same as first visit). */
+  resetUnit: (unitId: string, whileQuestionCount: number) => void;
 }
 
 function emptyDraft(unitId: string, nWhile: number): UnitAttemptRecord {
@@ -151,11 +152,13 @@ export const useUnitAttemptStore = create<UnitAttemptState>()(
           };
         }),
 
-      resetUnit: (unitId) =>
-        set((s) => {
-          const { [unitId]: _, ...rest } = s.attemptsByUnitId;
-          return { attemptsByUnitId: rest };
-        }),
+      resetUnit: (unitId, whileQuestionCount) =>
+        set((s) => ({
+          attemptsByUnitId: {
+            ...s.attemptsByUnitId,
+            [unitId]: emptyDraft(unitId, whileQuestionCount),
+          },
+        })),
     }),
     { name: "unit-listening-attempts" },
   ),

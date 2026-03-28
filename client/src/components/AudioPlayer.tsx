@@ -10,7 +10,6 @@ export function AudioPlayer({ src }: AudioPlayerProps) {
   const [isPlaying, setIsPlaying] = useState(false);
   const [progress, setProgress] = useState(0);
   const [duration, setDuration] = useState(0);
-  const [volume, setVolume] = useState(1);
   const [loadError, setLoadError] = useState(false);
   const audioRef = useRef<HTMLAudioElement>(null);
 
@@ -85,22 +84,14 @@ export function AudioPlayer({ src }: AudioPlayerProps) {
       
       <div className="flex flex-col gap-3">
         <div className="flex items-center justify-between gap-4">
-          <div className="flex items-center gap-2">
-            <button
-              onClick={togglePlay}
-              className="h-10 w-10 flex items-center justify-center rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-colors shadow-md shadow-primary/20"
-            >
-              {isPlaying ? <Pause className="h-5 w-5" /> : <Play className="h-5 w-5 ml-0.5" />}
-            </button>
-            <button
-              onClick={handleRestart}
-              className="h-8 w-8 flex items-center justify-center rounded-full bg-secondary text-secondary-foreground hover:bg-secondary/80 transition-colors"
-            >
-              <RotateCcw className="h-4 w-4" />
-            </button>
-          </div>
+          <button
+            onClick={togglePlay}
+            className="h-8 w-8 flex items-center justify-center rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-colors shadow-md shadow-primary/20"
+          >
+            {isPlaying ? <Pause className="h-5 w-5 fill-primary-foreground" /> : <Play className="h-5 w-5 ml-0.5 fill-primary-foreground" />}
+          </button>
 
-          <div className="flex-1">
+          <div className="flex-1 -mt-2">
              <div className="flex justify-between text-xs text-muted-foreground mb-1 font-medium">
               <span>{formatTime(progress)}</span>
               <span>{formatTime(duration || 0)}</span>
@@ -113,19 +104,12 @@ export function AudioPlayer({ src }: AudioPlayerProps) {
               className="cursor-pointer"
             />
           </div>
-          
-          <div className="hidden sm:flex items-center gap-2 w-24">
-            <Volume2 className="h-4 w-4 text-muted-foreground" />
-            <Slider
-              value={[volume]}
-              max={1}
-              step={0.1}
-              onValueChange={(vals) => {
-                setVolume(vals[0]);
-                if (audioRef.current) audioRef.current.volume = vals[0];
-              }}
-            />
-          </div>
+          <button
+              onClick={handleRestart}
+              className="h-8 w-8 flex items-center justify-center rounded-full bg-secondary text-secondary-foreground hover:bg-secondary/80 transition-colors"
+            >
+              <RotateCcw className="h-4 w-4" />
+          </button>
         </div>
       </div>
     </div>

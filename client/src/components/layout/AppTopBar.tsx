@@ -5,9 +5,10 @@ import type { ReactNode } from "react";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { cn } from "@/lib/utils";
+import { Logo } from "../ui/logo";
 
 const shellClass =
-  "sticky top-2 z-50 flex items-center gap-2 w-full p-3 justify-between md:justify-end";
+  "sticky top-0 z-50 flex items-center gap-2 w-full md:max-w-[66rem] mx-auto p-3 justify-between bg-background/50 border-b border-b-white/5 backdrop-blur-sm md:bg-transparent md:border-b-0 md:backdrop-blur-none";
 
 type AppTopBarProps = {
   children?: ReactNode;
@@ -21,8 +22,11 @@ type AppTopBarProps = {
 export function AppTopBar({ children, className }: AppTopBarProps) {
   return (
     <div className={cn(shellClass, className)}>
-      {children}
-      <ThemeToggle />
+      <Logo title="SpeakAI" />
+      <div className="flex items-center gap-2">
+        {children}
+        <ThemeToggle />
+      </div>
     </div>
   );
 }

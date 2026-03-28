@@ -110,8 +110,8 @@ for (let u = 0; u < unitHeaders.length; u++) {
   const aLines = aStart >= 0 ? blockLines.slice(aStart, aEnd) : [];
   const { start: bStart, end: bEnd } = findSection(blockLines, "B) While", "C) Post");
   const bLines = bStart >= 0 ? blockLines.slice(bStart, bEnd) : [];
-  const { start: cStart } = findSection(blockLines, "C) Post", "END");
-  const cLines = cStart >= 0 ? blockLines.slice(cStart) : [];
+  const { start: cStart, end: cEnd } = findSection(blockLines, "C) Post", "END");
+  const cLines = cStart >= 0 ? blockLines.slice(cStart, cEnd) : [];
 
   // Normalize A/B labels - findSection may miss variants
   const fixSection = (lines, startPat) => {
@@ -134,6 +134,10 @@ for (let u = 0; u < unitHeaders.length; u++) {
     bSection.map((l) => l.trim()),
     0
   );
+  const postQs = parseQuestions(
+    cLines.map((l) => l.trim()),
+    0
+  );
 
   const num = romanToInt(h.roman);
   const id = `unit-${String(num).padStart(2, "0")}-${slugify(h.title)}`;
@@ -148,7 +152,7 @@ for (let u = 0; u < unitHeaders.length; u++) {
     whileListening: { questions: whileQs },
     postlistening: {
       transcript: "",
-      discussionPrompts: [],
+      discussionPrompts: postQs,
     },
     audioPreUrl: intermediateAudioUrl(num),
     audioWhileUrl: intermediateAudioUrl(num),
