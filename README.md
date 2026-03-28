@@ -80,9 +80,6 @@ Run this after editing `Units.md` so the app and JSON stay in sync.
 | `npm run build:units` | Regenerate `shared/units.json` from `Units.md` |
 | `npm run vercel-build` | Vite build (used on Vercel) |
 
-## Deployment
-
-Vercel and environment notes are documented in **[VERCEL_DEPLOY.md](./VERCEL_DEPLOY.md)**.
 
 ## License
 
