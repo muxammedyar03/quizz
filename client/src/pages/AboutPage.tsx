@@ -5,7 +5,7 @@ import { useLocation } from "wouter";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { Button } from "@/components/ui/button";
 
-import avatarUrl from "@assets/images/avatar.png";
+const AVATAR_URL = "/author-avatar.png";
 
 const paragraphs = [
   "I am Altinay Turejanova, a researcher at Karakalpak State University named after Berdakh, specializing in English language teaching methodology. I have completed my Bachelor's and Master's degrees and am currently pursuing my doctoral studies.",
@@ -99,7 +99,7 @@ export default function AboutPage() {
                 <div className="absolute -inset-1 rounded-3xl bg-gradient-to-br from-primary/40 via-accent/30 to-primary/20 opacity-80 blur-md" />
                 <div className="relative overflow-hidden rounded-3xl border border-border/80 bg-card/40 shadow-2xl shadow-primary/10 ring-1 ring-border/50 backdrop-blur-sm">
                   <img
-                    src={avatarUrl}
+                    src={AVATAR_URL}
                     alt="Portrait of Altinay Turejanova"
                     className="aspect-[3/4] w-full object-cover"
                     loading="eager"
