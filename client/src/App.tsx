@@ -6,6 +6,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { ThemeProvider } from "@/components/ThemeProvider";
 
 import LevelSelect from "@/pages/LevelSelect";
+import AboutPage from "@/pages/AboutPage";
 import QuizPage from "@/pages/QuizPage";
 import ResultPage from "@/pages/ResultPage";
 import NotFound from "@/pages/not-found";
@@ -14,6 +15,7 @@ function Router() {
   return (
     <Switch>
       <Route path="/" component={LevelSelect} />
+      <Route path="/about" component={AboutPage} />
       <Route path="/quiz/:level" component={QuizPage} />
       <Route path="/result" component={ResultPage} />
       <Route component={NotFound} />
