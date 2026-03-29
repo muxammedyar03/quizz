@@ -51,7 +51,7 @@ export default function LevelSelect() {
             transition={{ delay: 0.2 }}
             className="text-xl text-muted-foreground leading-relaxed"
           >
-            Select your proficiency level to begin a tailored audio quiz designed to test and improve your comprehension.
+            Intermediate has 20 live units. Beginner and Advanced are coming soon.
           </motion.p>
         </div>
 
@@ -64,30 +64,33 @@ export default function LevelSelect() {
           <motion.div variants={item} className="h-full">
             <LevelCard 
               title="Beginner" 
-              description="Simple conversations and clear pronunciation. Perfect for those just starting their journey."
+              description="Simple listening quiz. Coming soon—use Intermediate for now."
               level="beginner"
-              questionCount={10}
-              duration="10 min"
+              questionCount={20}
+              countLabel="Units"
+              duration="Self-paced"
             />
           </motion.div>
 
           <motion.div variants={item} className="h-full">
             <LevelCard 
               title="Intermediate" 
-              description="Natural speed conversations with varied topics. Challenge yourself with everyday scenarios."
+              description="20 podcast units: pre, while, and post listening. Progress saved in your browser."
               level="intermediate"
-              questionCount={15}
-              duration="15 min"
+              questionCount={20}
+              countLabel="Units"
+              duration="Self-paced"
             />
           </motion.div>
 
           <motion.div variants={item} className="h-full">
             <LevelCard 
               title="Advanced" 
-              description="Complex topics, fast-paced speech, and diverse accents. For those seeking mastery."
+              description="Fast, dense listening for fluency. Coming soon."
               level="advanced"
               questionCount={20}
-              duration="20 min"
+              countLabel="Units"
+              duration="Self-paced"
             />
           </motion.div>
         </motion.div>

@@ -7,10 +7,19 @@ interface LevelCardProps {
   description: string;
   level: "beginner" | "intermediate" | "advanced";
   questionCount: number;
+  /** Shown after the number, e.g. "Questions" or "Units". */
+  countLabel?: string;
   duration: string;
 }
 
-export function LevelCard({ title, description, level, questionCount, duration }: LevelCardProps) {
+export function LevelCard({
+  title,
+  description,
+  level,
+  questionCount,
+  countLabel = "Questions",
+  duration,
+}: LevelCardProps) {
   const icons = {
     beginner: <BookOpen className="w-6 h-6 text-green-500" />,
     intermediate: <Music className="w-6 h-6 text-blue-500" />,
@@ -57,7 +66,7 @@ export function LevelCard({ title, description, level, questionCount, duration }
           <div className="flex items-center justify-between mt-auto pt-4 border-t border-black/5 dark:border-white/5">
             <div className="flex gap-4 text-xs font-medium text-muted-foreground">
               <span className="flex items-center gap-1">
-                <Star className="w-3 h-3" /> {questionCount} Questions
+                <Star className="w-3 h-3" /> {questionCount} {countLabel}
               </span>
               <span className="flex items-center gap-1">
                 <ClockIcon className="w-3 h-3" /> {duration}
