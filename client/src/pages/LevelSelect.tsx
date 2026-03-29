@@ -42,7 +42,7 @@ export default function LevelSelect() {
             transition={{ delay: 0.1 }}
             className="text-4xl md:text-6xl font-display font-bold tracking-tight text-foreground"
           >
-            Master Your Listening Skills
+            Speak&Grow – Podcast-Based Speaking Trainer
           </motion.h1>
           
           <motion.p 
@@ -98,7 +98,7 @@ export default function LevelSelect() {
           transition={{ delay: 0.8 }}
           className="text-center mt-24 text-sm text-muted-foreground"
         >
-          <p>© 2026 English Listening Quiz. Designed for students.</p>
+          <p>© 2026 Speak&Grow – Podcast-Based Speaking Trainer. Designed for students.</p>
         </motion.footer>
       </main>
     </div>
