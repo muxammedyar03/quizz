@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import type { UnitData } from "@shared/schema";
-import { AudioPlayer } from "@/components/AudioPlayer";
 import { unitFlowCardClass } from "../../constants";
 import { VoiceRecorderCard } from "../VoiceRecorderCard";
 import { CtaButton } from "../CtaButton";
@@ -28,7 +27,7 @@ export function PrelisteningPhase({ unit, savedDuration, onRecordingComplete, on
     >
       <SectionLabel letter="A" label="Prelistening" />
 
-      <AudioPlayer src={unit.audioPreUrl} />
+      //<AudioPlayer src={unit.audioPreUrl} />
 
       <div className={unitFlowCardClass}>
         <p className="mb-2.5 text-[10px] font-bold uppercase tracking-widest text-indigo-400 dark:text-indigo-500/70">
