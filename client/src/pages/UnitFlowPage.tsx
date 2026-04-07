@@ -3,6 +3,7 @@ import { useRoute, useLocation } from "wouter";
 import { AnimatePresence } from "framer-motion";
 
 import { getUnitById } from "@shared/units";
+import { isHubLevel, isUnitInHubLevel, type HubLevel } from "@shared/levelUnits";
 import {
   useUnitAttemptStore,
   isPendingResults,
@@ -22,10 +23,13 @@ import { PostListeningPhase } from "@/features/unit-flow/ui/phases/PostListening
 import type { UnitFlowPhase } from "@/features/unit-flow/constants";
 
 export default function UnitFlowPage() {
-  const [, params] = useRoute("/quiz/intermediate/:unitId");
+  const [, params] = useRoute("/quiz/:level/:unitId");
   const [, setLocation] = useLocation();
+  const rawLevel = params?.level;
+  const hubLevel: HubLevel | undefined = isHubLevel(rawLevel) ? rawLevel : undefined;
   const unitId = params?.unitId ?? "";
   const unit = useMemo(() => getUnitById(unitId), [unitId]);
+  const unitAllowed = hubLevel && unit ? isUnitInHubLevel(unit.id, hubLevel) : false;
 
   const ensureReveals = useUnitAttemptStore((s) => s.ensureReveals);
   const getOrCreateDraft = useUnitAttemptStore((s) => s.getOrCreateDraft);
@@ -42,12 +46,17 @@ export default function UnitFlowPage() {
   }, [ensureReveals]);
 
   useEffect(() => {
-    if (unit) getOrCreateDraft(unit.id, unit.whileListening.questions.length);
-  }, [unit, unitId, getOrCreateDraft]);
+    if (unit && hubLevel && isUnitInHubLevel(unit.id, hubLevel)) {
+      getOrCreateDraft(unit.id, unit.whileListening.questions.length);
+    }
+  }, [unit, unitId, hubLevel, getOrCreateDraft]);
 
-  const goBack = useCallback(() => setLocation("/quiz/intermediate"), [setLocation]);
+  const goBack = useCallback(() => {
+    if (hubLevel) setLocation(`/quiz/${hubLevel}`);
+    else setLocation("/quiz/intermediate");
+  }, [hubLevel, setLocation]);
 
-  if (!unitId || !unit) {
+  if (!unitId || !unit || !hubLevel || !unitAllowed) {
     return (
       <UnitFlowShell onBack={() => setLocation("/")}>
         <UnitFlowNotFound onBack={goBack} />
@@ -96,7 +105,7 @@ export default function UnitFlowPage() {
   return (
     <UnitFlowShell onBack={goBack}>
       <div className="relative z-10 mx-auto flex h-full w-full max-w-2xl flex-1 flex-col gap-0 px-4 pb-5 pt-3">
-        <UnitFlowHeader unit={unit} />
+        <UnitFlowHeader unit={unit} hubLevel={hubLevel} />
         <StepProgress current={phase} />
 
         <AnimatePresence mode="wait">

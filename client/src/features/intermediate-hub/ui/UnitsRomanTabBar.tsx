@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { Check, Clock } from "lucide-react";
 import type { UnitData } from "@shared/schema";
+import type { HubLevel } from "@shared/levelUnits";
+import { getRomanLabelForHub } from "@shared/levelUnits";
 import { cn } from "@/lib/utils";
 import {
   isPendingResults,
@@ -9,6 +11,7 @@ import {
 } from "@/store/unit-attempt.store";
 
 type Props = {
+  hubLevel: HubLevel;
   units: UnitData[];
   attemptsByUnitId: Record<string, UnitAttemptRecord>;
   activeTab: string | null;
@@ -16,6 +19,7 @@ type Props = {
 };
 
 export function UnitsRomanTabBar({
+  hubLevel,
   units,
   attemptsByUnitId,
   activeTab,
@@ -57,7 +61,7 @@ export function UnitsRomanTabBar({
                     ],
               )}
             >
-              <span className="tabular-nums">{u.romanNumeral}</span>
+              <span className="tabular-nums">{getRomanLabelForHub(u, hubLevel)}</span>
               {done && (
                 <span
                   className={cn(

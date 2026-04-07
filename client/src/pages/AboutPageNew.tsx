@@ -46,6 +46,37 @@ const paragraphs = [
       </>
     ),
   },
+  {
+    text: (
+      <>* * *</>
+    ),
+  },
+  {
+    text: (
+      <>
+        "Men Altınay Túrejanova, 
+        <strong className="font-semibold text-foreground"> Berdiaq atındaǵı Qaraqalpaqstan mámleketlik universitetinde</strong> anglichan tilin oqıtıw metodikası boyınsha izertlewshi. 
+        Men bakalavr hám magistr dárejelerin tamamlaǵanman hám házir doktorlıq izertlewlerimdi aparıp atırman."
+      </>
+    ),
+  },
+  {
+    text: (
+      <>
+       "Meniń izertlewm orta bilim beriwdiń joqarı basqıshındaǵı oqıwshılardıń anglichan tilinde <strong className="font-semibold text-foreground"> sóylew qábiletin podkastlardan paydalanıw arqalı rawajlandırıw</strong>ǵa qaratılǵan bolıp, 
+        ásirese, qaraqalpaq tilinde tálim beriletuǵın mekteplerge bólek itibar qaratıladı.
+        Meniń ilimiy qızıǵıwshılıǵım zamanagóy tálim texnologiyaları, 
+        til táliminde multimedia qurallarınan paydalanıw, podkastga tiykarlanǵan oqıtıw hám oqıwshılardıń awızsha baylanıs qábiletin jaqsılawdı óz ishine aladı.",
+      </>
+    ),
+  },
+  {
+    text: (
+      <>
+        "Men aktiv túrde ilimiy izertlewler menen shuǵıllanaman hám nátiyjeli anglichan tilin oqıtıw hám úyreniwdi qollap-quwatlawǵa qaratılǵan <strong className="font-semibold text-foreground"> cifrlı tálim resursların jaratıwda </strong> qatnasıw etemen."
+      </>
+    ),
+  },
 ] as const;
 
 const researchAreas = [
@@ -124,7 +155,7 @@ export default function AboutPage() {
       </AppTopBar>
 
       {/* Main content */}
-      <main className="relative z-10 mx-auto max-w-5xl px-6 pb-20 pt-24 md:pt-28">
+      <main className="relative z-10 mx-auto max-w-5xl px-6 pb-20 pt-12 md:pt-16">
         {/* Badge */}
         <motion.div
           initial={reduceMotion ? false : { opacity: 0, y: -10 }}

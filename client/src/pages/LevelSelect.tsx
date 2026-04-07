@@ -33,7 +33,7 @@ export default function LevelSelect() {
             className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium mb-2"
           >
             <Headphones className="w-4 h-4" />
-            <span>English Listening Practice</span>
+            <span>Listening and speaking practice</span>
           </motion.div>
           
           <motion.h1 
@@ -42,8 +42,8 @@ export default function LevelSelect() {
             transition={{ delay: 0.1 }}
             className="text-4xl md:text-6xl font-display font-bold tracking-tight text-foreground"
           >
-            Speak&Grow – Podcast-Based Speaking Trainer
-          </motion.h1>
+            PodCastle - a voice-led path to knowledge
+            </motion.h1>
           
           <motion.p 
             initial={{ opacity: 0 }}
@@ -51,7 +51,11 @@ export default function LevelSelect() {
             transition={{ delay: 0.2 }}
             className="text-xl text-muted-foreground leading-relaxed"
           >
-            Intermediate has 20 live units. Beginner and Advanced are coming soon.
+            PodCastle – making learning through educational podcasts accessible, free, and enjoyable for everyone, while also developing listeners&apos; speaking and listening comprehension skills.
+
+            <br />“Dawıs jeteklegen bilim jolı” <br />
+            PodCastle – ta’limiy podkastlar arqalı bilim alıwdı hámme ushın qolay, tegin hám kewilli etedi, sonday-aq tıńlawshılardıń sóylew hám tıńlap túsiniw qábiletlerin rawajlandıradı.
+
           </motion.p>
         </div>
 
@@ -64,9 +68,9 @@ export default function LevelSelect() {
           <motion.div variants={item} className="h-full">
             <LevelCard 
               title="Beginner" 
-              description="Simple listening quiz. Coming soon—use Intermediate for now."
+              description="Five units only—no overlap with Intermediate or Advanced. Pre, while, and post listening."
               level="beginner"
-              questionCount={20}
+              questionCount={5}
               countLabel="Units"
               duration="Self-paced"
             />
@@ -75,9 +79,9 @@ export default function LevelSelect() {
           <motion.div variants={item} className="h-full">
             <LevelCard 
               title="Intermediate" 
-              description="20 podcast units: pre, while, and post listening. Progress saved in your browser."
+              description="Ten units Disjoint from Beginner and Advanced; pre, while and post tasks."
               level="intermediate"
-              questionCount={20}
+              questionCount={10}
               countLabel="Units"
               duration="Self-paced"
             />
@@ -86,9 +90,9 @@ export default function LevelSelect() {
           <motion.div variants={item} className="h-full">
             <LevelCard 
               title="Advanced" 
-              description="Fast, dense listening for fluency. Coming soon."
+              description="Five challenge units labeled in the app. Same flow—exclusive to this track."
               level="advanced"
-              questionCount={20}
+              questionCount={5}
               countLabel="Units"
               duration="Self-paced"
             />
@@ -101,7 +105,7 @@ export default function LevelSelect() {
           transition={{ delay: 0.8 }}
           className="text-center mt-24 text-sm text-muted-foreground"
         >
-          <p>© 2026 Speak&Grow – Podcast-Based Speaking Trainer. Designed for students.</p>
+          <p>© 2026 PodCastle - podcast based speaking trainer. Designed for students. <br /> Education is now in your pocket.</p>
         </motion.footer>
       </main>
     </div>

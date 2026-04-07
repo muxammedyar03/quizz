@@ -22,7 +22,7 @@ type AppTopBarProps = {
 export function AppTopBar({ children, className }: AppTopBarProps) {
   return (
     <div className={cn(shellClass, className)}>
-      <Logo title="SpeakAI" />
+      <Logo title="PodCastle" />
       <div className="flex items-center gap-2">
         {children}
         <ThemeToggle />

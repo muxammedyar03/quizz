@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { Check, ChevronRight, Clock } from "lucide-react";
 import type { UnitData } from "@shared/schema";
+import type { HubLevel } from "@shared/levelUnits";
+import { getRomanLabelForHub } from "@shared/levelUnits";
 import { cn } from "@/lib/utils";
 import {
   isPendingResults,
@@ -10,6 +12,7 @@ import {
 import { hubCardVariants } from "../constants";
 
 type Props = {
+  hubLevel: HubLevel;
   unit: UnitData;
   index: number;
   accentGradient: string;
@@ -18,7 +21,15 @@ type Props = {
   onRestartUnit?: (unitId: string) => void;
 };
 
-export function UnitGridCard({ unit, index, accentGradient, attempt, onSelect, onRestartUnit }: Props) {
+export function UnitGridCard({
+  hubLevel,
+  unit,
+  index,
+  accentGradient,
+  attempt,
+  onSelect,
+  onRestartUnit,
+}: Props) {
   const pending = isPendingResults(attempt);
   const done = isRevealed(attempt);
 
@@ -60,7 +71,7 @@ export function UnitGridCard({ unit, index, accentGradient, attempt, onSelect, o
         <div className="relative">
           <div className="mb-2 flex items-center justify-between">
             <span className="text-[10px] font-bold uppercase tracking-widest text-indigo-400 dark:text-indigo-500/70">
-              Unit {unit.romanNumeral}
+              Unit {getRomanLabelForHub(unit, hubLevel)}
             </span>
             {done && (
               <span

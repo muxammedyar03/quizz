@@ -1,7 +1,15 @@
 import { motion } from "framer-motion";
 import { Headphones } from "lucide-react";
+import type { HubLevel } from "@shared/levelUnits";
+import { hubHeroCopy } from "./intermediateHubCopy";
 
-export function IntermediateHubHero() {
+type Props = {
+  hubLevel: HubLevel;
+};
+
+export function IntermediateHubHero({ hubLevel }: Props) {
+  const copy = hubHeroCopy[hubLevel];
+
   return (
     <div className="mx-auto mb-10 max-w-2xl text-center">
       <motion.div
@@ -11,7 +19,7 @@ export function IntermediateHubHero() {
         className="mb-4 inline-flex items-center gap-2 rounded-full border border-indigo-200 bg-white px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-indigo-600 shadow-sm shadow-indigo-100 dark:border-indigo-500/30 dark:bg-indigo-500/10 dark:text-indigo-400 dark:shadow-none"
       >
         <Headphones className="h-3.5 w-3.5" />
-        Intermediate
+        {copy.badge}
       </motion.div>
 
       <motion.h1
@@ -22,7 +30,7 @@ export function IntermediateHubHero() {
       >
         Choose your{" "}
         <span className="bg-gradient-to-r from-indigo-500 to-violet-500 bg-clip-text text-transparent">
-          Unit
+          {copy.titleWord}
         </span>
       </motion.h1>
 
@@ -32,7 +40,7 @@ export function IntermediateHubHero() {
         transition={{ duration: 0.4, delay: 0.16 }}
         className="mt-3 text-sm leading-relaxed text-indigo-400 dark:text-gray-500"
       >
-        Each unit has Prelistening, While listening, and Post listening steps.
+        {copy.subtitle}
       </motion.p>
     </div>
   );

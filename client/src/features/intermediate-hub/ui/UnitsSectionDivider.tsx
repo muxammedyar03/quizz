@@ -1,6 +1,10 @@
 import { motion } from "framer-motion";
 
-export function UnitsSectionDivider() {
+type Props = {
+  label?: string;
+};
+
+export function UnitsSectionDivider({ label = "All units" }: Props) {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -10,7 +14,7 @@ export function UnitsSectionDivider() {
     >
       <div className="h-px flex-1 bg-gradient-to-r from-transparent via-indigo-200 to-transparent dark:via-white/10" />
       <span className="text-[10px] font-bold uppercase tracking-widest text-indigo-300 dark:text-gray-600">
-        All units
+        {label}
       </span>
       <div className="h-px flex-1 bg-gradient-to-r from-transparent via-indigo-200 to-transparent dark:via-white/10" />
     </motion.div>
